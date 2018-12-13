@@ -1,0 +1,75 @@
+/* Global */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+/* Header Elements */
+
+header {
+    background: lightcyan;
+    height: 100px;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.brand {
+    padding-left: 50px;
+}
+
+.salaries {
+    padding-right: 50px;
+}
+
+.salaries ul {
+    display: flex;
+    flex-flow: column;
+}
+
+.salaries h3 {
+    margin: 0;
+}
+
+/* Main */
+
+.categories {
+    margin: 0;
+    padding: 0;
+}
+
+.category {
+    /* border: 1px solid palevioletred; */
+    background: gray;
+    color: #fff;
+}
+
+.expenses {
+    padding: 0;
+    color: #000;
+}
+
+.expense {
+    /* border: 1px solid #000; */
+    background: white;
+}
+
+.expense:nth-child(even) {
+    /* border: 1px solid #000; */
+    background: lightgray;
+}
+
+.expense ul {
+    display: flex;
+    justify-content: space-evenly
+}
