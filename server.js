@@ -18,7 +18,7 @@ mongo.MongoClient.connect(process.env.MONGODB_URI, { useNewUrlParser: true }, (e
     }
 
     app.post('/months', (req, res) => {
-        client.db('heroku_wzjtws5p').collection('months').insertOne(req.body, (error, result) => {
+        client.db(process.env.DB_NAME).collection('months').insertOne(req.body, (error, result) => {
             if (error) {
                 res.sendStatus(500); // internal server error
                 return;
@@ -28,7 +28,7 @@ mongo.MongoClient.connect(process.env.MONGODB_URI, { useNewUrlParser: true }, (e
     });
 
     app.get('/months/:year/:month', (req, res) => {
-        client.db('budgeting').collection('months').findOne({year: Number(req.params.year), month: Number(req.params.month)}, (error, result) => {
+        client.db(process.env.DB_NAME).collection('months').findOne({year: Number(req.params.year), month: Number(req.params.month)}, (error, result) => {
             if (error) {
                 res.sendStatus(500);
                 return;
