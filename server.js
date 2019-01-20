@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 app.use(express.static('client'));
 
-mongo.MongoClient.connect(`${process.env.MONGODB_URI}/budgeting`, { useNewUrlParser: true }, (err, client) => {
+mongo.MongoClient.connect(process.env.MONGODB_URI, { useNewUrlParser: true }, (err, client) => {
     if (err) {
         console.log(`Error connection to db [err=${err}]`);
         return;
