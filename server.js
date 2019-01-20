@@ -18,7 +18,7 @@ mongo.MongoClient.connect(process.env.MONGODB_URI, { useNewUrlParser: true }, (e
     }
 
     app.post('/months', (req, res) => {
-        client.db('budgeting').collection('months').insertOne(req.body, (error, result) => {
+        client.db('heroku_wzjtws5p').collection('months').insertOne(req.body, (error, result) => {
             if (error) {
                 res.sendStatus(500); // internal server error
                 return;
