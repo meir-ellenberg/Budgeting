@@ -1,75 +1,58 @@
-/* Global */
+/* COLORS */
+.dark-blue-bg {
+    background: #303841;
+}
 
-body {
+.light-grey-bg {
+    background: #eeeeee;
+}
+
+.white-bg:nth-child(2n+1) {
+    background: #fff;
+}
+
+.border {
+    border: 1px solid #000;
+    padding: 1px;
+}
+
+/* GLOBAL */
+* {
+    padding: 0;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 li {
     list-style: none;
 }
 
-/* Header Elements */
 
-header {
-    background: lightcyan;
-    height: 100px;
+.grid {
+    display: grid;
+    /* justify-items: center; */
+    /* align-items: center; */
 }
 
-header ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+.header {
+    font-size: 2em;
 }
 
-.brand {
-    padding-left: 50px;
+.two-columns {
+    grid-template-columns: 1fr 1fr;
 }
 
-.salaries {
-    padding-right: 50px;
+.three-columns {
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.salaries ul {
-    display: flex;
-    flex-flow: column;
+.four-columns {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.salaries h3 {
-    margin: 0;
+.five-columns {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-/* Main */
-
-.categories {
-    margin: 0;
-    padding: 0;
-}
-
-.category {
-    /* border: 1px solid palevioletred; */
-    background: gray;
-    color: #fff;
-}
-
-.expenses {
-    padding: 0;
-    color: #000;
-}
-
-.expense {
-    /* border: 1px solid #000; */
-    background: white;
-}
-
-.expense:nth-child(even) {
-    /* border: 1px solid #000; */
-    background: lightgray;
-}
-
-.expense ul {
-    display: flex;
-    justify-content: space-evenly
+.row {
+    /* grid-auto-flow: row; */
 }
